@@ -1,5 +1,3 @@
-# fokus
-
 <p align="center">
 <img src="https://github.com/guimevn/projeto-Fokus/assets/54328227/11a2e1a8-825f-4b4f-8c0f-167c0558780b alt="Imagem da Tela Inicial do Projeto Fokus">
 </p>
