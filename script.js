@@ -125,6 +125,7 @@ const contagemRegressiva = () => {
     if (tempoDecorridoEmSegundos <= 0) {
         audioEnd.play();
         alert('Tempo finalizado!');
+        reiniciarTempo();
         zerar();
         return;
     }
@@ -160,6 +161,17 @@ function mostrarTempo() {
         second: '2-digit'
     });
     tempoNaTela.innerHTML = `${tempoFormatado}`;
+}
+
+function reiniciarTempo() {
+    if (html.getAttribute('data-contexto') === 'foco') {
+        tempoDecorridoEmSegundos = tempoFoco * 60;
+    } else if (html.getAttribute('data-contexto') === 'descanso-curto') {
+        tempoDecorridoEmSegundos = tempoCurto * 60;
+    } else if (html.getAttribute('data-contexto') === 'descanso-longo') {
+        tempoDecorridoEmSegundos = tempoLongo * 60;
+    }
+    mostrarTempo();
 }
 
 mostrarTempo();
